@@ -9,6 +9,8 @@
 	maxHealth = 7
 	health = 7
 	chew_probability = 0
+	gold_core_spawnable = HOSTILE_SPAWN
+
 
 /mob/living/simple_animal/mouse/boommouse/Initialize()
 	. = ..()
