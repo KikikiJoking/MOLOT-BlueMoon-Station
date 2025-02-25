@@ -19,7 +19,7 @@
 	var/mutable_appearance/tracked_overlay
 	var/datum/component/squeak/squeak
 	var/transforming = FALSE
-	var/last_use/mob/living/carbon/
+	var/last_use
 
 /datum/action/innate/ability/slime_blobform/IsAvailable()
 	if(!transforming)
