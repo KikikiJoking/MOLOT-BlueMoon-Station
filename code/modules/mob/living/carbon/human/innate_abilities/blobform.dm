@@ -94,7 +94,7 @@
 	//like the above, but reverse everything done!
 	H.cut_overlay(tracked_overlay)
 	var/obj/effect/puddle_effect = new puddle_from_effect(get_turf(owner), owner.dir)
-	if (H.dna.features["puddle_slime_fea"] == TRUE)
+	if (H.dna.features["puddle_slime_fea"] == TRUE) // Блаамп
 		qdel(puddle_effect)
 		puddle_effect = new puddle_from_effect_alt(get_turf(owner), owner.dir)
 	puddle_effect.color = tracked_overlay.color
