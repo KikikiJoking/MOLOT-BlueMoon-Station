@@ -65,7 +65,7 @@
 				ADD_TRAIT(H, TRAIT_MOBILITY_NOREST, SLIMEPUDDLE_TRAIT)
 				ADD_TRAIT(H, TRAIT_ARMOR_BROKEN, SLIMEPUDDLE_TRAIT)
 				H.update_disabled_bodyparts(silent = TRUE)	//silently update arms to be paralysed
-
+				H.remove_movespeed_modifier(/datum/movespeed_modifier/slime_puddle)
 				H.pass_flags |= PASSMOB //this actually lets people pass over you
 				squeak = H.AddComponent(/datum/component/squeak, custom_sounds = list('sound/effects/blobattack.ogg')) //blorble noise when people step on you
 
