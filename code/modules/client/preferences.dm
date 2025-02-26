@@ -958,8 +958,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					//BLUEMOON edit start
 					if(pref_species.type == /datum/species/jelly/roundstartslime)
 						dat += APPEARANCE_CATEGORY_COLUMN
-						dat += "<h3>Slime?</h3>"
-						dat += "<a style='display:block;width:50px' href='?_src_=prefs;preference=puddle_slime_task;task=input'>[features["puddle_slime_fea"] ? "Yes" : "No"]</a>"
+						dat += "<h3>be a slime?</h3>"
+						dat += "<a style='display:block;width:100px' href='?_src_=prefs;preference=puddle_slime_task;task=input'>[features["puddle_slime_fea"] ? "Yes" : "No"]</a>"
 						dat += "</td>"
 					//BLUEMOON edit end
 
