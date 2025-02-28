@@ -4295,6 +4295,7 @@
 #include "modular_bluemoon\code\game\objects\items\lewd_items\genital_equipment\chastity\flat_chastity_cage.dm"
 #include "modular_bluemoon\code\game\objects\items\melee\backstab_knives.dm"
 #include "modular_bluemoon\code\game\objects\items\stacks\tiles\tile_plasteel.dm"
+#include "modular_bluemoon\code\game\objects\items\storage\bags.dm"
 #include "modular_bluemoon\code\game\objects\items\storage\boxes.dm"
 #include "modular_bluemoon\code\game\objects\structures\barsigns.dm"
 #include "modular_bluemoon\code\game\objects\structures\demolition_hammer_cabinet.dm"
