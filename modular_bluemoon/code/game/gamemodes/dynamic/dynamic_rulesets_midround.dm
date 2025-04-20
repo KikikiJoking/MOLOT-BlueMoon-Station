@@ -1,4 +1,5 @@
-/// Warhammer Pirates ruleset
+/*
+/// /// Warhammer Pirates ruleset
 /datum/dynamic_ruleset/midround/warhammer_pirate
 	name = "Warhammer Pirates"
 	antag_flag = "Warhammer Pirates"
@@ -20,3 +21,4 @@
 /datum/dynamic_ruleset/midround/warhammer_pirate/execute()
 	send_pirate_threat()
 	return ..()
+*/

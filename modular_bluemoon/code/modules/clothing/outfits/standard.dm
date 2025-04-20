@@ -5,7 +5,7 @@
 	suit = /obj/item/clothing/suit/pirate
 	head = /obj/item/clothing/head/bandana
 	glasses = /obj/item/clothing/glasses/eyepatch
-
+/*
 /datum/outfit/warhammer_pirate/space
 	name = "Space Warhammer Pirate, Space"
 	suit = /obj/item/clothing/suit/space/pirate
@@ -34,3 +34,4 @@
 
 	var/obj/item/implant/weapons_auth/B = new
 	B.implant(H)
+*/

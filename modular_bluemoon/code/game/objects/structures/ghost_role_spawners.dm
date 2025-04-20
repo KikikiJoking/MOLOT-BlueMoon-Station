@@ -163,7 +163,7 @@ mob/living/proc/ghost_cafe_traits(switch_on = FALSE, additional_area)
 	icon_state = "sleeper"
 	mob_name = "a Warhammer Pirate"
 	mob_species = /datum/species/skeleton/space
-	outfit = /datum/outfit/warhammer_pirate/space
+//	outfit = /datum/outfit/warhammer_pirate/space
 	roundstart = FALSE
 	death = FALSE
 	anchored = TRUE
@@ -222,7 +222,7 @@ mob/living/proc/ghost_cafe_traits(switch_on = FALSE, additional_area)
 /obj/effect/mob_spawn/human/warhammer_pirate/corpse/captain
 	rank = "Captain"
 	mob_name = "Dead Warhammer Pirate Captain"
-	outfit = /datum/outfit/warhammer_pirate/space/captain
+//	outfit = /datum/outfit/warhammer_pirate/space/captain
 
 /obj/effect/mob_spawn/human/warhammer_pirate/special(mob/living/new_spawn)
 	new_spawn.fully_replace_character_name(new_spawn.real_name,generate_warhammer_pirate_name())
@@ -239,7 +239,7 @@ mob/living/proc/ghost_cafe_traits(switch_on = FALSE, additional_area)
 
 /obj/effect/mob_spawn/human/warhammer_pirate/captain
 	rank = "Captain"
-	outfit = /datum/outfit/warhammer_pirate/space/captain
+//	outfit = /datum/outfit/warhammer_pirate/space/captain
 
 /obj/effect/mob_spawn/human/warhammer_pirate/gunner
 	rank = "Gunner"

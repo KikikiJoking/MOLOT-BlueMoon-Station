@@ -1,3 +1,4 @@
+/*
 /datum/round_event_control/warhammer_pirate
 	name = "Warhammer Pirates"
 	typepath = /datum/round_event/warhammer_pirate
@@ -66,7 +67,7 @@
 
 /datum/round_event/warhammer_pirate/start()
 	send_pirate_threat()
-
+/*
 /proc/spawn_warhammer_pirate(datum/comm_message/threat_msg, ship_template, skip_answer_check)
 	if(!skip_answer_check && threat_msg?.answered == 1)
 		return
@@ -96,7 +97,7 @@
 				notify_ghosts("The pirate ship has an object of interest: [spawner]!", source=spawner, action=NOTIFY_ORBIT, header="Something's Interesting!")
 
 	priority_announce("В секторе обнаружен вооруженный корабль.", "Отдел ССО Пакта Синих Лун", 'modular_bluemoon/phenyamomota/sound/announcer/pirate_incoming.ogg')
-
+*/
 /obj/machinery/computer/shuttle/warhammer_pirate
 	name = "WarHammer shuttle console"
 	shuttleId = "WarHammership"
@@ -193,3 +194,4 @@
 	equip_delay_other = 20
 	mutantrace_variation = STYLE_DIGITIGRADE
 	tail_state = ""
+*/
