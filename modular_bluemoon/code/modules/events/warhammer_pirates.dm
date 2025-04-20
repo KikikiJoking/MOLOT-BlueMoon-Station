@@ -1,4 +1,3 @@
-/*
 /datum/round_event_control/warhammer_pirate
 	name = "Warhammer Pirates"
 	typepath = /datum/round_event/warhammer_pirate
@@ -33,7 +32,7 @@
 		payoff = max(payoff_min, FLOOR(D.account_balance * 0.80, 1000))
 	switch(warhammer_pirate_type)
 		if(WARHAMMER_PIRATE_ROGUES)
-			ship_template = /datum/map_template/shuttle/pirate/default // Заменить
+			ship_template = /datum/map_template/shuttle/warhammer_pirate // Заменить
 			threat_msg.title = "Предложение о Защите Сектора"
 			threat_msg.content = "Приветствуем вас с корабля [ship_name]. Ваш сектор нуждается в защите, заплатите нам [payoff] кредитов или на вас наверняка кто-то нападёт."
 			threat_msg.possible_answers = list("Мы заплатим.","Мы заплатим, но на самом деле нет.")
@@ -67,7 +66,7 @@
 
 /datum/round_event/warhammer_pirate/start()
 	send_pirate_threat()
-/*
+
 /proc/spawn_warhammer_pirate(datum/comm_message/threat_msg, ship_template, skip_answer_check)
 	if(!skip_answer_check && threat_msg?.answered == 1)
 		return
@@ -75,7 +74,7 @@
 	var/list/candidates = pollGhostCandidates("Вы желаете стать космопиратом?", ROLE_TRAITOR)
 	shuffle_inplace(candidates)
 
-	var/datum/map_template/shuttle/pirate/ship = new ship_template // Заменить
+	var/datum/map_template/shuttle/warhammer_pirate/ship = new ship_template // Заменить
 	var/x = rand(TRANSITIONEDGE, world.maxx - TRANSITIONEDGE - ship.width)
 	var/y = rand(TRANSITIONEDGE, world.maxy - TRANSITIONEDGE - ship.height)
 	var/z = SSmapping.empty_space.z_value
@@ -97,7 +96,7 @@
 				notify_ghosts("The pirate ship has an object of interest: [spawner]!", source=spawner, action=NOTIFY_ORBIT, header="Something's Interesting!")
 
 	priority_announce("В секторе обнаружен вооруженный корабль.", "Отдел ССО Пакта Синих Лун", 'modular_bluemoon/phenyamomota/sound/announcer/pirate_incoming.ogg')
-*/
+
 /obj/machinery/computer/shuttle/warhammer_pirate
 	name = "WarHammer shuttle console"
 	shuttleId = "WarHammership"
@@ -194,4 +193,3 @@
 	equip_delay_other = 20
 	mutantrace_variation = STYLE_DIGITIGRADE
 	tail_state = ""
-*/
