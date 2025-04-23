@@ -4194,7 +4194,6 @@
 #include "interface\fonts\tiny_unicode.dm"
 #include "interface\fonts\vcr_osd_mono.dm"
 #include "modular_bluemoon\_maps\PrisonStation\job_changes.dm"
-#include "modular_bluemoon\_maps\shuttles\bluemoon\warhammer_pirate_ship.dmm"
 #include "modular_bluemoon\code\_DEFINES\mobs.dm"
 #include "modular_bluemoon\code\_HELPERS\admin.dm"
 #include "modular_bluemoon\code\_HELPERS\roundend.dm"

@@ -377,7 +377,7 @@
 /turf/open/floor/lf_haron/shuttle3,
 /area/shuttle/lf_haron)
 "NF" = (
-/turf/open/space/basic,
+/turf/template_noop,
 /area/template_noop)
 "NK" = (
 /obj/structure/table/reinforced,
