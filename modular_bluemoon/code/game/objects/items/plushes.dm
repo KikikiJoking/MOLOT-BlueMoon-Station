@@ -295,9 +295,8 @@
 		if(M.client && M.client.ckey == "krashly")
 			say("Свои! Свои!")
 
-/obj/item/toy/bm/sierra_iris_plushie
+/obj/item/toy/plush/bm/tiamat/sierra_iris_plushie
 	name = "I.R.I.S. plushie"
 	desc = "От неё исходит характерный металлический запах.."
 	icon_state = "iris"
-	squeak_override = list('modular_bluemoon/sound/plush/iris_sound.ogg' = 1)
 	can_you_fuck_plush = FALSE
