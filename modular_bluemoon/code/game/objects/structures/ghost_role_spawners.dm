@@ -154,6 +154,7 @@ mob/living/proc/ghost_cafe_traits(switch_on = FALSE, additional_area)
 	var/mob/living/carbon/human/H = new_spawn
 	H.mind.make_XenoChangeling()
 
+//warhammer_pirate
 /obj/effect/mob_spawn/human/warhammer_pirate
 	name = "Space Warhammer Pirate Sleeper"
 	desc = "A cryo sleeper smelling faintly of rum. The sleeper looks unstable. <i>Perhaps the pirate within can be killed with the right tools...</i>"
@@ -163,7 +164,7 @@ mob/living/proc/ghost_cafe_traits(switch_on = FALSE, additional_area)
 	icon_state = "sleeper"
 	mob_name = "a Warhammer Pirate"
 	mob_species = /datum/species/skeleton/space
-	outfit = /datum/outfit/warhammer_pirate/space
+	outfit = /datum/outfit/warhammer_pirate
 	roundstart = FALSE
 	death = FALSE
 	anchored = TRUE
@@ -185,31 +186,6 @@ mob/living/proc/ghost_cafe_traits(switch_on = FALSE, additional_area)
 	else
 		to_chat(user, "<span class='notice'>If you want to kill the pirate off, something to pry open the sleeper might be the best way to do it.</span>")
 
-
-/obj/effect/mob_spawn/human/warhammer_pirate/attackby(obj/item/W, mob/user, params)
-	if(W.tool_behaviour == TOOL_CROWBAR && user.a_intent != INTENT_HARM)
-		if(user.mind.has_antag_datum(/datum/antagonist/warhammer_pirate))
-			to_chat(user,"<span class='warning'>Why would you want to do that to your shipmate? That'd kill them.</span>")
-			return
-		user.visible_message("<span class='warning'>[user] start to pry open [src]...</span>",
-				"<span class='notice'>You start to pry open [src]...</span>",
-				"<span class='italics'>You hear prying...</span>")
-		W.play_tool_sound(src)
-		if(do_after(user, 100*W.toolspeed, target = src))
-			user.visible_message("<span class='warning'>[user] pries open [src], disrupting the sleep of the pirate within and killing them.</span>",
-				"<span class='notice'>You pry open [src], disrupting the sleep of the pirate within and killing them.</span>",
-				"<span class='italics'>You hear prying, followed by the death rattling of bones.</span>")
-			log_game("[key_name(user)] has successfully pried open [src] and disabled a space pirate spawner.")
-			W.play_tool_sound(src)
-			playsound(src.loc, 'modular_citadel/sound/voice/scream_skeleton.ogg', 50, 1, 4, 1.2)
-			if(rank == "Captain")
-				new /obj/effect/mob_spawn/human/warhammer_pirate/corpse/captain(get_turf(src))
-			else
-				new /obj/effect/mob_spawn/human/warhammer_pirate/corpse(get_turf(src))
-			qdel(src)
-	else
-		..()
-
 /obj/effect/mob_spawn/human/warhammer_pirate/corpse
 	mob_name = "Dead Warhammer Pirate"
 	death = TRUE
@@ -218,11 +194,6 @@ mob/living/proc/ghost_cafe_traits(switch_on = FALSE, additional_area)
 
 /obj/effect/mob_spawn/human/warhammer_pirate/corpse/Destroy()
 	return ..()
-
-/obj/effect/mob_spawn/human/warhammer_pirate/corpse/captain
-	rank = "Captain"
-	mob_name = "Dead Warhammer Pirate Captain"
-	outfit = /datum/outfit/warhammer_pirate/space/captain
 
 /obj/effect/mob_spawn/human/warhammer_pirate/special(mob/living/new_spawn)
 	new_spawn.fully_replace_character_name(new_spawn.real_name,generate_warhammer_pirate_name())
@@ -236,10 +207,6 @@ mob/living/proc/ghost_cafe_traits(switch_on = FALSE, additional_area)
 /obj/effect/mob_spawn/human/warhammer_pirate/Destroy()
 	new/obj/structure/showcase/machinery/oldpod/used(drop_location())
 	return ..()
-
-/obj/effect/mob_spawn/human/warhammer_pirate/captain
-	rank = "Captain"
-	outfit = /datum/outfit/warhammer_pirate/space/captain
 
 /obj/effect/mob_spawn/human/warhammer_pirate/gunner
 	rank = "Gunner"

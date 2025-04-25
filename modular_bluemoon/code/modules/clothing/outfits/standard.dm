@@ -1,36 +1,32 @@
 /datum/outfit/warhammer_pirate
-	name = "Space Warhammer Pirate"
-	uniform = /obj/item/clothing/under/costume/pirate
-	shoes = /obj/item/clothing/shoes/sneakers/brown
-	suit = /obj/item/clothing/suit/pirate
-	head = /obj/item/clothing/head/bandana
-	glasses = /obj/item/clothing/glasses/eyepatch
-
-/datum/outfit/warhammer_pirate/space
-	name = "Space Warhammer Pirate, Space"
-	suit = /obj/item/clothing/suit/space/pirate
-	head = /obj/item/clothing/head/helmet/space/warhammer_pirate/bandana
+	name = "Warhammer Pirate"
+	uniform = /obj/item/clothing/under/syndicate/combat
+	suit = /obj/item/clothing/suit/space/syndicate/darktemplar
+//	toggle_helmet
+	back = /obj/item/storage/backpack
+	belt = /obj/item/nullrod/claymore/chainsaw_sword/real
+	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
+	shoes = /obj/item/clothing/shoes/jackboots/powerbots
+	head = /obj/item/clothing/head/helmet/space/syndicate/darktemplar/pirate
+	mask = /obj/item/clothing/mask/gas/sechailer/angrymarin
+//	neck
 	ears = /obj/item/radio/headset/pirate
-	id = /obj/item/card/id/pirate
+//	glasses
+	id = /obj/item/card/id/knight
+	l_pocket = /obj/item/autosurgeon/syndicate/inteq/astartes
+//	r_pocket
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/bolter_pistol
+	r_hand = /obj/item/tank/jetpack/suit
+/*	l_hand
+	internals_slot*/
+	backpack_contents = (/obj/item/ammo_box/magazine/bolt_pistol_magazine = 5)
+/*	box
+	implants = /obj/item/organ/organic_implants/ossmodula
+	accessory
+	underwear
+	socks
+	shirt
+	ears_extra
+	wrists*/
 
-	give_space_cooler_if_synth = TRUE // BLUEMOON ADD
-
-/datum/outfit/warhammer_pirate/space/captain
-	name = "Space Warhammer Pirate, Space, Captian"
-	head = /obj/item/clothing/head/helmet/space/warhammer_pirate
-
-/datum/outfit/warhammer_pirate/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
-	H.faction |= "pirate"
-
-	var/obj/item/radio/R = H.ears
-	if(R)
-		R.set_frequency(FREQ_PIRATE)
-		R.freqlock = TRUE
-
-	var/obj/item/card/id/W = H.wear_id
-	if(W)
-		W.registered_name = H.real_name
-		W.update_label(H.real_name)
-
-	var/obj/item/implant/weapons_auth/B = new
-	B.implant(H)
+	give_space_cooler_if_synth = TRUE

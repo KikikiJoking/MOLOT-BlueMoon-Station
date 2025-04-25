@@ -73,6 +73,8 @@ GLOBAL_LIST_EMPTY(living_heart_cache)	//A list of all living hearts in existance
 
 #define IS_INTEQ(mob) (mob?.mind?.has_antag_datum(/datum/antagonist/traitor) || mob.mind?.has_antag_datum(/datum/antagonist/raiders) || mob.mind?.has_antag_datum(/datum/antagonist/nukeop) || (ROLE_INTEQ in mob.faction))
 
+#define IS_WARHAMMER(mob) (mob?.mind?.has_antag_datum(/datum/antagonist/warhammer_pirate))
+
 /// Checks if the given mob is a changeling
 #define IS_CHANGELING(mob) (mob?.mind?.has_antag_datum(/datum/antagonist/changeling))
 

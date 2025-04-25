@@ -108,7 +108,7 @@
 /obj/item/clothing/suit/space/syndicate/darktemplar/equipped(mob/user, slot)
 	..()
 	if(slot == ITEM_SLOT_OCLOTHING)
-		if(!IS_INTEQ(user))
+		if(!IS_INTEQ(user) && !IS_WARHAMMER(user))
 			to_chat(user, "<span class='danger'><B>Запуск проверки генетического кода</B><br> Обнаружены неавторизованные сигнатуры. <B>ПРОИЗВОДИТСЯ ОЧИСТКА</B></span>")
 			playsound(get_turf(src), 'sound/machines/nuke/confirm_beep.ogg', 65, 1, 1)
 			addtimer(CALLBACK(src, PROC_REF(explode)), 3 SECONDS)
@@ -148,6 +148,12 @@
 	if (user.head == src)
 		var/datum/atom_hud/DHUD = GLOB.huds[DATA_HUD_MEDICAL_ADVANCED]
 		DHUD.remove_hud_from(user)
+
+/obj/item/clothing/head/helmet/space/syndicate/darktemplar/pirate
+	icon = 'modular_bluemoon/fluffs/icons/obj/clothing/head.dmi'
+	mob_overlay_icon = 'modular_bluemoon/fluffs/icons/mob/clothing/head.dmi'
+	icon_state = "wh_chaplain"
+
 //броня
 /obj/item/clothing/suit/space/syndicate/darktemplar
 	name = "Dark Power Armour"
