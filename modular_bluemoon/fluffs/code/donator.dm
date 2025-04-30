@@ -999,7 +999,7 @@
 	name = "Heavy pocket hammer Kit"
 	slot = ITEM_SLOT_ICLOTHING
 	path = /obj/item/modkit/hammercrowbar_kit
-	ckeywhitelist = list("allazarius", "hazzi", "devildeadspace", "wangig", "wather565")
+	ckeywhitelist = list("allazarius", "hazzi", "devildeadspace", "wangig", "wather565", "sierraiv") // Добро дали
 	subcategory = LOADOUT_SUBCATEGORIES_DON02
 
 /datum/gear/donator/bm/dreadmk3_kit
