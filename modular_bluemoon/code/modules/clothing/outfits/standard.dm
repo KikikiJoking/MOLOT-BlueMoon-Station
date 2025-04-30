@@ -19,7 +19,7 @@
 	r_hand = /obj/item/tank/jetpack/suit
 /*	l_hand
 	internals_slot*/
-	backpack_contents = (/obj/item/ammo_box/magazine/bolt_pistol_magazine = 5)
+	backpack_contents = list(/obj/item/ammo_box/magazine/bolt_pistol_magazine = 5)
 /*	box
 	implants = /obj/item/organ/organic_implants/ossmodula
 	accessory
